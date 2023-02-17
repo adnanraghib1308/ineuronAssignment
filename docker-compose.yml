@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  ineuron:
+    build: .
+    ports:
+      - "3009:3030"
+    depends_on:
+      - ineurondb
+    environment:
+      DATABASE_URL: postgres://postgres:123456@ineurondb/ineuron
+
+  ineurondb:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: ineuron
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
