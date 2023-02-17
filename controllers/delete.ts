@@ -16,6 +16,10 @@ const router = require("express").Router();
  */
 const deleteProduct = async (req: Request, res: Response) => {
   const { id } = req.params;
+
+  const product = await prisma.product.findFirst({ where: {id: parseInt(id)}});
+  if(!product) return res.json({ message: "No record found with this id "});
+  
   await prisma.product.delete({
     where: {
       id: parseInt(id)
