@@ -25,6 +25,7 @@ const createProduct = async (req: Request, res: Response) => {
     size
   } = req.body;
 
+  if(!name || !description || !quantity || !salePrice || !costPrice || !size) return res.json({ message: "Some mandatory values are missinge. Please provide these values - name, description, quantity, salePrice, costPrice, size"})
   const product = await prisma.product.create({
     data: {
       name,

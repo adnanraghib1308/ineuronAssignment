@@ -19,6 +19,9 @@ const updateProduct = async (req: Request, res: Response) => {
   let { id }= req.params;
   const { name, description, quantity, salePrice, costPrice, size } = req.body;
 
+  const existingProduct = await prisma.product.findFirst({ where: { id: parseInt(id) } });
+  if (!existingProduct) return res.json({ message: "Can't update. No product found with this id " });
+
   const product = await prisma.product.update({
     where: {
       id: parseInt(id)
