@@ -69,3 +69,9 @@ curl --location --request DELETE 'http://34.131.151.133:3030/api/delete/6' \
     "size": "10"
 }'
 ```
+
+# Steps to run the project
+- create a .env file and paste your postgres url with key DATABASE_URL
+- For development mode start by 'npm run dev'
+- For production use 'tsc && node dist/server.js'
+- For your test file use 'tsc && mocha dist/test/product.test.js'
