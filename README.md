@@ -9,7 +9,7 @@ I have create 6 enpoint
 - /api/update/:id - updates product with given values from body
 - /api/delete/:id - deletes a product with provided id
 
-I have hosted this project on Google Cloud VM with IP http://34.131.151.133:3030/. Below are the curls for each CRUD endpoint. You can test these in postman.
+I have hosted this project on Google Cloud VM with IP http://34.131.151.133:3030/. Below are the curls for each CRUD endpoint. You can test these in postman
 
 # 01. /api/create
 
