@@ -8,7 +8,7 @@ const bodyParser = express.json({});
 
 app.use(bodyParser);
 
-app.get('/', (req: Request, res: Response) => { res.send("Hi there !!") });
+app.get('/', (req: Request, res: Response) => { res.send("Hi there V2!!") });
 app.use('/api', require('./controllers'));
 
 app.listen(3030, () => console.log("Server running on port 3030"));
