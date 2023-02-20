@@ -11,6 +11,8 @@ I have create 6 enpoint
 
 I have hosted this project on Google Cloud VM with IP http://34.131.151.133:3030/. Below are the curls for each CRUD endpoint. You can test these in postman
 
+Docker Hub Repo: https://hub.docker.com/repository/docker/adnan1308/ineuroncompose/general
+
 # 01. /api/create
 
 ```
