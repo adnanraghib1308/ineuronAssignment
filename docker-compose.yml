@@ -3,6 +3,7 @@ version: '3'
 services:
   ineuron:
     build: .
+    restart: always
     ports:
       - "3009:3030"
     depends_on:
